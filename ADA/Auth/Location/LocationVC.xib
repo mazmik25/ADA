@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationVC" customModule="ADA" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="GaE-UL-lso" id="HVI-3J-8Z2"/>
+                <outlet property="infoLabel" destination="7Lp-kr-Rxb" id="T6x-pI-rP4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZE5-gu-iZG">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lp-kr-Rxb">
+                            <rect key="frame" x="16" y="378.5" width="382" height="61"/>
+                            <string key="text">Great! Now we need to access your
+real-time location whenever you
+open this app</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_smile" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-UL-lso">
+                            <rect key="frame" x="157" y="258.5" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="WGd-ht-sl3"/>
+                                <constraint firstAttribute="height" constant="100" id="ngm-D4-nTJ"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrT-O8-dZe">
+                            <rect key="frame" x="0.0" y="768" width="414" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="SQ5-DH-Wn0"/>
+                            </constraints>
+                            <state key="normal" title="Grant Permission"/>
+                            <connections>
+                                <action selector="onLocationPermissionTapped:" destination="-1" eventType="touchUpInside" id="otY-Sc-Xkh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="vrT-O8-dZe" firstAttribute="leading" secondItem="ZE5-gu-iZG" secondAttribute="leading" id="3w0-hF-RcT"/>
+                        <constraint firstItem="7Lp-kr-Rxb" firstAttribute="centerY" secondItem="ZE5-gu-iZG" secondAttribute="centerY" id="L8v-xj-BhV"/>
+                        <constraint firstItem="GaE-UL-lso" firstAttribute="centerX" secondItem="ZE5-gu-iZG" secondAttribute="centerX" id="OrQ-ul-4uf"/>
+                        <constraint firstItem="7Lp-kr-Rxb" firstAttribute="top" secondItem="GaE-UL-lso" secondAttribute="bottom" constant="20" id="TXO-vc-YqW"/>
+                        <constraint firstItem="7Lp-kr-Rxb" firstAttribute="leading" secondItem="ZE5-gu-iZG" secondAttribute="leading" constant="16" id="e6x-qo-gX9"/>
+                        <constraint firstAttribute="bottom" secondItem="vrT-O8-dZe" secondAttribute="bottom" id="lwz-AL-vzm"/>
+                        <constraint firstAttribute="trailing" secondItem="7Lp-kr-Rxb" secondAttribute="trailing" constant="16" id="q3e-jV-RVt"/>
+                        <constraint firstAttribute="trailing" secondItem="vrT-O8-dZe" secondAttribute="trailing" id="w19-0w-hgz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.85098039219999999" green="0.90588235289999997" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZE5-gu-iZG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Pc8-9l-SYo"/>
+                <constraint firstItem="ZE5-gu-iZG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VYP-j3-Ppc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZE5-gu-iZG" secondAttribute="bottom" id="ezw-0c-3s0"/>
+                <constraint firstAttribute="trailing" secondItem="ZE5-gu-iZG" secondAttribute="trailing" id="qto-Wu-rza"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_smile" width="100" height="100"/>
+    </resources>
+</document>

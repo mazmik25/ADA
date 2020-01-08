@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="ADA" customModuleProvider="target">
+            <connections>
+                <outlet property="findMeButton" destination="Hl4-oF-kI7" id="C7C-NG-NJh"/>
+                <outlet property="interactionView" destination="Gmc-Dd-RZN" id="oI7-DU-DIg"/>
+                <outlet property="mapView" destination="uV9-tQ-cZd" id="1P3-hh-dRQ"/>
+                <outlet property="nameLabel" destination="CEh-Bc-sDL" id="x7R-Mg-XfY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-3j-FJO">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uV9-tQ-cZd">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        </mapView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gmc-Dd-RZN">
+                            <rect key="frame" x="0.0" y="668" width="414" height="150"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEh-Bc-sDL">
+                                    <rect key="frame" x="16" y="16" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hl4-oF-kI7">
+                                    <rect key="frame" x="16" y="100" width="382" height="50"/>
+                                    <color key="backgroundColor" red="0.85098039219999999" green="0.90588235289999997" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="ua0-bu-Ver"/>
+                                    </constraints>
+                                    <state key="normal" title="Find Me">
+                                        <color key="titleColor" red="0.1215686275" green="0.12549019610000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="findMeTapped:" destination="-1" eventType="touchUpInside" id="Vxq-y5-myn"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="CEh-Bc-sDL" firstAttribute="top" secondItem="Gmc-Dd-RZN" secondAttribute="top" constant="16" id="EDj-bS-Qwp"/>
+                                <constraint firstItem="Hl4-oF-kI7" firstAttribute="leading" secondItem="Gmc-Dd-RZN" secondAttribute="leading" constant="16" id="FAO-5O-sat"/>
+                                <constraint firstAttribute="height" constant="150" id="GaR-re-Wqw"/>
+                                <constraint firstAttribute="trailing" secondItem="CEh-Bc-sDL" secondAttribute="trailing" constant="16" id="HBS-ik-t1a"/>
+                                <constraint firstAttribute="bottom" secondItem="Hl4-oF-kI7" secondAttribute="bottom" id="Seg-2T-9nM"/>
+                                <constraint firstAttribute="trailing" secondItem="Hl4-oF-kI7" secondAttribute="trailing" constant="16" id="U1l-co-Lvc"/>
+                                <constraint firstItem="CEh-Bc-sDL" firstAttribute="leading" secondItem="Gmc-Dd-RZN" secondAttribute="leading" constant="16" id="yC0-3U-tcX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Gmc-Dd-RZN" secondAttribute="trailing" id="LAL-NJ-5lj"/>
+                        <constraint firstItem="uV9-tQ-cZd" firstAttribute="leading" secondItem="lPf-3j-FJO" secondAttribute="leading" id="M90-Te-a3I"/>
+                        <constraint firstAttribute="bottom" secondItem="Gmc-Dd-RZN" secondAttribute="bottom" id="lp8-iV-N7N"/>
+                        <constraint firstItem="uV9-tQ-cZd" firstAttribute="top" secondItem="lPf-3j-FJO" secondAttribute="top" id="nQQ-eR-X0B"/>
+                        <constraint firstAttribute="bottom" secondItem="uV9-tQ-cZd" secondAttribute="bottom" id="s9V-OE-4FP"/>
+                        <constraint firstItem="Gmc-Dd-RZN" firstAttribute="leading" secondItem="lPf-3j-FJO" secondAttribute="leading" id="uFk-7b-xUe"/>
+                        <constraint firstAttribute="trailing" secondItem="uV9-tQ-cZd" secondAttribute="trailing" id="xK1-JJ-lrt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lPf-3j-FJO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="A29-oi-GN6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lPf-3j-FJO" secondAttribute="bottom" id="KXL-pv-PBW"/>
+                <constraint firstItem="lPf-3j-FJO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aKx-6n-Av1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lPf-3j-FJO" secondAttribute="trailing" id="d3K-77-IvV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
